@@ -19,12 +19,9 @@ set -xe \
 		ca-certificates \
 		curl \
 		apache-ant \
-		npm \
 		libtool \
 		libcurl \
 		openssl-dev \
-	&& docker-php-ext-install \
-	    intl \
-		zip \
-		pdo_mysql \
-		opcache
+	&& apk add --no-cache \
+		nodejs \
+		npm
