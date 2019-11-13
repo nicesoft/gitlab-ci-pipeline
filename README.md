@@ -13,10 +13,7 @@ Docker Hub: https://hub.docker.com/r/dockerphp/nginx/
 ## Supported tags
 | Tag | Image | Layers |
 | --- | --- |  --- |
-| ```7.2```| ```dockerphp/gitlab-ci-pipeline:7.2-alpine``` | [![](https://images.microbadger.com/badges/image/dockerphp/gitlab-ci-pipeline:7.2-alpine.svg)](https://microbadger.com/images/dockerphp/gitlab-ci-pipeline:7.2-alpine)|
-| ```7.1```| ```dockerphp/gitlab-ci-pipeline:7.1-alpine``` | [![](https://images.microbadger.com/badges/image/dockerphp/gitlab-ci-pipeline:7.1-alpine.svg)](https://microbadger.com/images/dockerphp/gitlab-ci-pipeline:7.1-alpine)|
-| ```7.0```| ```dockerphp/gitlab-ci-pipeline:7.0-alpine``` | [![](https://images.microbadger.com/badges/image/dockerphp/gitlab-ci-pipeline:7.0-alpine.svg)](https://microbadger.com/images/dockerphp/gitlab-ci-pipeline:7.0-alpine)|
-| ```5.6```| ```dockerphp/gitlab-ci-pipeline:5.6-alpine``` | [![](https://images.microbadger.com/badges/image/dockerphp/gitlab-ci-pipeline:5.6-alpine.svg)](https://microbadger.com/images/dockerphp/gitlab-ci-pipeline:5.6-alpine)|
+| ```7.2```| ```nicesoft/gitlab-ci-pipeline:7.2-alpine``` | [![](https://images.microbadger.com/badges/image/nicesoft/gitlab-ci-pipeline:7.2-alpine.svg)](https://microbadger.com/images/nicesoft/gitlab-ci-pipeline:7.2-alpine)|
 
 > Based on [Official PHP images Alpine](https://hub.docker.com/_/php/) and all versions come with:
 
@@ -45,7 +42,7 @@ Docker Hub: https://hub.docker.com/r/dockerphp/nginx/
 
 Acces to the container console easily:
 
-    docker run --rm -ti -v /your/project:/app dockerphp/gitlab-ci-pipeline:7.1 sh
+    docker run --rm -ti -v /your/project:/app nicesoft/gitlab-ci-pipeline:7.2 sh
 
 
 ### Configuration of your jobs with .gitlab-ci.yml
@@ -53,7 +50,7 @@ Acces to the container console easily:
 #### Basic configuration
 
 ```yaml
-image: dockerphp/gitlab-ci-pipeline:7.2
+image: nicesoft/gitlab-ci-pipeline:7.2
 
 cache:
   paths:
@@ -87,7 +84,7 @@ test:
   stage: test
   services:
     - mysql
-  image: dockerphp/gitlab-ci-pipeline:7.2
+  image: nicesoft/gitlab-ci-pipeline:7.2
   script:
     - make test
 ```
