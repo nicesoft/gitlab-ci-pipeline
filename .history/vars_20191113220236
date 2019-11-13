@@ -1,0 +1,4 @@
+TAGS="7.2"
+VARIANT="alpine"
+NAMESPACE="nicesoft/gitlab-ci-pipeline"
+REPOSITORIES="image"
